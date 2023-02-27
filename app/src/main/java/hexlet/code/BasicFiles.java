@@ -7,15 +7,15 @@ import java.nio.file.Paths;
 
 public class BasicFiles {
     public static void createFiles() {
-        Path filepath1 = Paths.get("/home/pelmen/java-project-71/app/temp/file1.json");
-        Path filepath2 = Paths.get("/home/pelmen/java-project-71/app/temp/file2.json");
+        Path path1 = Paths.get("/home/pelmen/java-project-71/app/file1.json");
+        Path path2 = Paths.get("/home/pelmen/java-project-71/app/file2.json");
 
 
         try {
-            Path createdFilePath1 = Files.createFile(filepath1);
+            Path createdFilePath1 = Files.createFile(path1);
             System.out.println("File created " + createdFilePath1);
 
-            Path createdFilePath2 = Files.createFile(filepath2);
+            Path createdFilePath2 = Files.createFile(path2);
             System.out.println("File created " + createdFilePath2);
         } catch (Exception e) {
            e.printStackTrace();
@@ -23,27 +23,28 @@ public class BasicFiles {
 
         try {
         String textForFile1 =
-                "{\n" +
-                "  \"host\": \"hexlet.io\",\n" +
-                "  \"timeout\": 50,\n" +
-                "  \"proxy\": \"123.234.53.22\",\n" +
-                "  \"follow\": false\n" +
-                "}";
+                """
+                        {
+                          "host": "hexlet.io",
+                          "timeout": 50,
+                          "proxy": "123.234.53.22",
+                          "follow": false
+                        }""";
         byte[] bs1 = textForFile1.getBytes();
-        Path writtenFilePath1 = Files.write(filepath1, bs1);
-        //String content1 = Files.readString(writtenFilePath1);
-        //System.out.println(content1);
-        //System.out.println();
+        Path writtenFilePath1 = Files.write(path1, bs1);
+        Path filepath1 = Paths.get(writtenFilePath1.toUri()).toAbsolutePath().normalize();
 
-        String textForFile2 = "{\n" +
-                "  \"timeout\": 20,\n" +
-                "  \"verbose\": true,\n" +
-                "  \"host\": \"hexlet.io\"\n" +
-                "}";
+
+        String textForFile2 = """
+                {
+                  "timeout": 20,
+                  "verbose": true,
+                  "host": "hexlet.io"
+                }""";
         byte[] bs2 = textForFile2.getBytes();
-        Path writtenFilePath2 = Files.write(filepath2, bs2);
-        //String content2 = Files.readString(writtenFilePath2);
-        //System.out.println(content2);
+        Path writtenFilePath2 = Files.write(path2, bs2);
+        Path filepath2 = Paths.get(writtenFilePath2.toUri()).toAbsolutePath().normalize();
+
 
         } catch (Exception e) {
             e.printStackTrace();
