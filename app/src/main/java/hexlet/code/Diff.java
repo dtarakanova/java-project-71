@@ -10,7 +10,7 @@ import java.util.*;
 public class Diff {
 
     public static String generate(String filepath1, String filepath2) throws Exception {
-        Map<String, Object> newMap1= readFile(filepath1);
+        Map<String, Object> newMap1 = readFile(filepath1);
         Map<String, Object> newMap2 = readFile(filepath2);
         Map<String, Object> mapsCombined = new HashMap<>(newMap1);
         mapsCombined.putAll(newMap2);
@@ -25,10 +25,9 @@ public class Diff {
             Object oldValue = newMap1.get(key);
             if (newMap1.containsKey(key) && newMap2.containsKey(key)) {
                 if ((newMap1.containsValue(value)) && (newMap2.containsValue(value))) {
-                  builder.append("  ").append(key).append(": ").append(value).append("\n");
-                }
-                else {
-                  builder.append("- ").append(key).append(": ").append(oldValue).append("\n");
+                    builder.append("  ").append(key).append(": ").append(value).append("\n");
+                } else {
+                    builder.append("- ").append(key).append(": ").append(oldValue).append("\n");
                     builder.append("+ ").append(key).append(": ").append(value).append("\n");
                 }
             } else {
@@ -41,7 +40,7 @@ public class Diff {
         }
         builder.append("}");
         return builder.toString();
-            }
+    }
 
     private static Map<String, Object> readFile(String filePath) throws IOException {
         var normalizePath = normalizePath(filePath);
@@ -60,6 +59,4 @@ public class Diff {
         var pathParts = filePath.split("\\.");
         return pathParts[pathParts.length - 1];
     }
-   
 }
-
