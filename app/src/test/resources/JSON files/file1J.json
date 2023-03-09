@@ -1,0 +1,7 @@
+{
+  "name": "sasha",
+  "lastname": "petrova",
+  "age": 18,
+  "student": true,
+  "internship": false
+}
