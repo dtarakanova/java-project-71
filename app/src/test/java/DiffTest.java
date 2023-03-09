@@ -32,12 +32,12 @@ public class DiffTest {
     @Test
         public void testRightComparison() throws Exception {
         String result = Diff.generate(FILE1_JSON_FILEPATH1, FILE2_JSON_FILEPATH2);
-            assertEquals(result, DEFAULT_CORRECT_RESULT);
-        }
+        assertEquals(result, DEFAULT_CORRECT_RESULT);
+    }
 
-        @Test
+    @Test
         public void emptyFile() throws Exception {
-            String result = Diff.generate(FILE1_JSON_FILEPATH1, EMPTYFILE_JSON_PATH);
-            assertEquals(result, EMPTY_FILE_COMPARISON_RESULT);
-        }
+        String result = Diff.generate(FILE1_JSON_FILEPATH1, EMPTYFILE_JSON_PATH);
+        assertEquals(result, EMPTY_FILE_COMPARISON_RESULT);
+    }
 }
