@@ -1,4 +1,4 @@
-![https://github.com/dtarakanova/java-project-71/actions/workflows/main.yml](https://github.com/github/docs/actions/workflows/main.yml/badge.svg)
+![https://github.com/dtarakanova/java-project-71/actions/workflows/main.yml](https://github.com/github/docs/actions/workflows/Java CI/badge.svg)
 <a href="https://codeclimate.com/github/dtarakanova/java-project-71/maintainability"><img src="https://api.codeclimate.com/v1/badges/3d8545c4e3fa49a2092a/maintainability" /></a>
 
 ### Hexlet tests and linter status:
