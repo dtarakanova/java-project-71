@@ -42,7 +42,7 @@ public class Diff {
             }
         }
         builder.append("}");
-        return builder.toString(); //
+        return builder.toString();
     }
 
     private static Map<String, Object> readFile(String filePath) throws IOException {

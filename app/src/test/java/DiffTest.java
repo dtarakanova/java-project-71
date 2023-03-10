@@ -5,12 +5,12 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class DiffTest {
     public static final String FILE1_JSON_FILEPATH1 =
-            "./src/test/resources/JSON-files/file1J.json";
+            "/home/pelmen/java-project-71/app/src/test/resources/JSON-files/file1J.json";
     public static final String FILE2_JSON_FILEPATH2 =
-            "./src/test/resources/JSON-files/file2J.json";
+            "/home/pelmen/java-project-71/app/src/test/resources/JSON-files/file2J.json";
 
     public static final String EMPTYFILE_JSON_PATH =
-            "./src/test/resources/JSON-files/emptyfile.json";
+            "/home/pelmen/java-project-71/app/src/test/resources/JSON-files/emptyfile.json";
     private static final String DEFAULT_CORRECT_RESULT = "{\n"
             + "- age : 18"
             + "+ faculty : computer science"
