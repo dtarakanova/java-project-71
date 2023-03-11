@@ -27,7 +27,7 @@ public class Diff {
             Object value = sortedMap.get(key);
             Object oldValue = newMap1.get(key);
             if (newMap1.containsKey(key) && newMap2.containsKey(key)) {
-                if ((newMap1.containsValue(value)) && (newMap2.containsValue(value))) {
+                if ((newMap1.get(key)).equals(newMap2.get(key))) {
                     builder.append("  ").append(key).append(": ").append(value).append("\n");
                 } else {
                     builder.append("- ").append(key).append(": ").append(oldValue).append("\n");
