@@ -1,8 +1,7 @@
 import hexlet.code.Diff;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-
+import static org.assertj.core.api.Assertions.assertThat;
 public class DiffTest {
     public static final String FILE1_JSON_FILEPATH1 =
             "src/test/resources/JSONfiles/file1J.json";
@@ -32,12 +31,12 @@ public class DiffTest {
     @Test
         public void testRightComparison() throws Exception {
         String result = Diff.generate(FILE1_JSON_FILEPATH1, FILE2_JSON_FILEPATH2);
-        assertEquals(result, DEFAULT_CORRECT_RESULT);
+        assertThat(result).isEqualTo(DEFAULT_CORRECT_RESULT);
     }
 
     @Test
         public void emptyFile() throws Exception {
         String result = Diff.generate(FILE1_JSON_FILEPATH1, EMPTYFILE_JSON_PATH);
-        assertEquals(result, EMPTY_FILE_COMPARISON_RESULT);
+        assertThat(result).isEqualTo(EMPTY_FILE_COMPARISON_RESULT);
     }
 }
