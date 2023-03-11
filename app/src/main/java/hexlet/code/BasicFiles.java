@@ -1,3 +1,4 @@
+/*
 package hexlet.code;
 
 import java.nio.file.Files;
@@ -51,3 +52,4 @@ public class BasicFiles {
         }
     }
 }
+*/
