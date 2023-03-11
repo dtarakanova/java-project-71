@@ -1,7 +1,7 @@
 run-dist:
 	./build/install/app/bin/app
 
-covreport:
+report:
 	make -C app report
 
 .PHONY: build
