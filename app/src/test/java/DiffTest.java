@@ -31,12 +31,14 @@ public class DiffTest {
     @Test
         public void testRightComparison() throws Exception {
         String result = Diff.generate(FILE1_JSON_FILEPATH1, FILE2_JSON_FILEPATH2);
-        assertThat(result).isEqualTo(DEFAULT_CORRECT_RESULT);
+        var testResult = assertThat(result).isEqualTo(DEFAULT_CORRECT_RESULT);
+        System.out.println(testResult);
     }
 
     @Test
         public void emptyFile() throws Exception {
         String result = Diff.generate(FILE1_JSON_FILEPATH1, EMPTYFILE_JSON_PATH);
-        assertThat(result).isEqualTo(EMPTY_FILE_COMPARISON_RESULT);
+        var testResult = assertThat(result).isEqualTo(EMPTY_FILE_COMPARISON_RESULT);
+        System.out.println(testResult);
     }
 }
