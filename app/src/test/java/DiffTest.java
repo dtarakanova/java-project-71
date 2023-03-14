@@ -10,6 +10,14 @@ public class DiffTest {
 
     public static final String EMPTYFILE_JSON_PATH =
             "src/test/resources/JSONfiles/emptyfile.json";
+
+    public static final String FILE1_YAML_FILEPATH1 =
+            "src/test/resources/YAMLfiles/file1Y.yaml";
+    public static final String FILE2_YAML_FILEPATH2 =
+            "src/test/resources/YAMLfiles/file2Y.yaml";
+
+    public static final String EMPTYFILE_YAML_PATH =
+            "src/test/resources/YAMLfiles/emptyfileY.yaml";
     private static final String DEFAULT_CORRECT_RESULT = """
             {
             - age: 18
@@ -39,6 +47,18 @@ public class DiffTest {
     @Test
         public void emptyFile() throws Exception {
         String result = Diff.generate(FILE1_JSON_FILEPATH1, EMPTYFILE_JSON_PATH);
+        assertThat(result).isEqualTo(EMPTY_FILE_COMPARISON_RESULT);
+    }
+
+    @Test
+    public void testRightComparisonYaml() throws Exception {
+        String result = Diff.generate(FILE1_YAML_FILEPATH1, FILE2_YAML_FILEPATH2);
+        assertThat(result).isEqualTo(DEFAULT_CORRECT_RESULT);
+    }
+
+    @Test
+    public void emptyFileYaml() throws Exception {
+        String result = Diff.generate(FILE1_YAML_FILEPATH1, EMPTYFILE_YAML_PATH);
         assertThat(result).isEqualTo(EMPTY_FILE_COMPARISON_RESULT);
     }
 }
