@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="baf60795-1836-43d2-b5e4-0f47ac868b35" name="Changes" comment="Recreate Makefile">
-      <change afterPath="$PROJECT_DIR$/app/src/test/resources/YAMLfiles/emptyfileY.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/test/resources/YAMLfiles/file1Y.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/test/resources/YAMLfiles/file2Y.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/.gradle/7.4/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/app/.gradle/7.4/executionHistory/executionHistory.bin" afterDir="false" />
@@ -14,9 +11,19 @@
       <change beforePath="$PROJECT_DIR$/app/.gradle/7.4/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/app/.gradle/7.4/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/app/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/app/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/app/.gradle/file-system.probe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/classes/java/main/hexlet/code/BasicFiles.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/classes/java/test/DiffTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/classes/java/test/DiffTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/distributions/app-1.0-SNAPSHOT.tar" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/distributions/app-1.0-SNAPSHOT.tar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/distributions/app-1.0-SNAPSHOT.zip" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/distributions/app-1.0-SNAPSHOT.zip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/jacoco/test.exec" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/jacoco/test.exec" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/libs/app-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/libs/app-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/reports/tests/test/classes/DiffTest.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/reports/tests/test/classes/DiffTest.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/reports/tests/test/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/reports/tests/test/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/reports/tests/test/packages/default-package.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/reports/tests/test/packages/default-package.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/resources/test/YAMLfiles/emptyfileY.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/resources/test/YAMLfiles/emptyfileY.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/test-results/test/TEST-DiffTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/test-results/test/TEST-DiffTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/test-results/test/binary/results.bin" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/test-results/test/binary/results.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/tmp/compileTestJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/compileTestJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/test/resources/YAMLfiles/emptyfileY.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/resources/YAMLfiles/emptyfileY.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

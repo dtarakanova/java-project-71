@@ -2,21 +2,21 @@
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.dataformat.yaml.YAMLFactory;
+
 
 import java.io.IOException;
-import java.util.Map;
+import java.util.TreeMap;
 
 
-<span class="nc" id="L10">public class Parser {</span>
-<span class="fc" id="L11">    private static final ObjectMapper JSON_MAPPER = new ObjectMapper();</span>
+<span class="nc" id="L12">public class Parser {</span>
+    public static TreeMap&lt;String, Object&gt; parse(String content, String format) throws IOException {
+<span class="fc" id="L14">        ObjectMapper objectmapper = chooseFormat(format);</span>
+<span class="fc" id="L15">        return objectmapper.readValue(content, new TypeReference&lt;&gt;() { });</span>
+    }
 
-    public static Map&lt;String, Object&gt; parse(String content, String format) throws IOException {
-<span class="pc bpc" id="L14" title="1 of 2 branches missed.">        var mapper = switch (format) {</span>
-<span class="fc" id="L15">            case &quot;json&quot; -&gt; JSON_MAPPER;</span>
-<span class="pc" id="L16">            default -&gt; throw new RuntimeException(&quot;Unknown file format: &quot; + format);</span>
-        };
-<span class="fc" id="L18">        return mapper.readValue(content, new TypeReference&lt;&gt;() {</span>
-        });
+    public static ObjectMapper chooseFormat(String format) {
+<span class="fc bfc" id="L19" title="All 2 branches covered.">        return &quot;json&quot;.equals(format) ? new ObjectMapper() : new ObjectMapper(new YAMLFactory());</span>
     }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>
