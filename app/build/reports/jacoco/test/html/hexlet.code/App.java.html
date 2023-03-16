@@ -19,20 +19,25 @@ import java.util.concurrent.Callable;
     @Parameters(index = &quot;1&quot;, paramLabel = &quot;filepath2&quot;, description = &quot;path to second file&quot;)
     private String filepath2;
 
-    @Option(names = {&quot;-f&quot;, &quot;--format&quot;}, paramLabel = &quot;format&quot;, description = &quot;output format [default: stylish]&quot;)
+    @Option(names = {&quot;-f&quot;, &quot;--format&quot;}, paramLabel = &quot;format&quot;,
+            defaultValue = &quot;stylish&quot;, description = &quot;output format: stylish&quot;)
     private String format;
 
 
     @Override
     public Integer call() throws Exception {
-<span class="nc" id="L28">        System.out.println(Diff.generate(filepath1, filepath2));</span>
-<span class="nc" id="L29">        return 0;</span>
+<span class="nc" id="L29">        System.out.println(Diff.generate(filepath1, filepath2, format));</span>
+<span class="nc" id="L30">        return 0;</span>
     }
 
     public static void main(String... args) {
-<span class="nc" id="L33">        int exitCode = new CommandLine(new App()).execute(args);</span>
-<span class="nc" id="L34">        System.exit(exitCode);</span>
-<span class="nc" id="L35">    }</span>
+<span class="nc" id="L34">        int exitCode = new CommandLine(new App()).execute(args);</span>
+<span class="nc" id="L35">        System.exit(exitCode);</span>
+<span class="nc" id="L36">    }</span>
+
+    public void setFormat(String format) {
+<span class="nc" id="L39">        this.format = format;</span>
+<span class="nc" id="L40">    }</span>
 }
 
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

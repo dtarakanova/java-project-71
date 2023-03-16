@@ -6,17 +6,44 @@ import com.fasterxml.jackson.dataformat.yaml.YAMLFactory;
 
 
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.Map;
 import java.util.TreeMap;
 
 
-<span class="nc" id="L12">public class Parser {</span>
-    public static TreeMap&lt;String, Object&gt; parse(String content, String format) throws IOException {
-<span class="fc" id="L14">        ObjectMapper objectmapper = chooseFormat(format);</span>
-<span class="fc" id="L15">        return objectmapper.readValue(content, new TypeReference&lt;&gt;() { });</span>
+<span class="nc" id="L16">public class Parser {</span>
+
+    public static Map&lt;String, Object&gt; readFile(String filePath) throws IOException {
+<span class="fc" id="L19">        var normalizePath = normalizePath(filePath);</span>
+<span class="fc" id="L20">        var format = getFormat(filePath);</span>
+
+<span class="fc" id="L22">        var content = Files.readString(normalizePath);</span>
+
+<span class="fc" id="L24">        return Parser.parse(content, format);</span>
     }
 
+    public static TreeMap&lt;String, Object&gt; parse(String content, String format) throws IOException {
+<span class="fc" id="L28">        ObjectMapper objectmapper = chooseFormat(format);</span>
+<span class="fc" id="L29">        return objectmapper.readValue(content, new TypeReference&lt;&gt;() { });</span>
+    }
+
+    private static Path normalizePath(String path) {
+<span class="fc" id="L33">        return Paths.get(path).toAbsolutePath().normalize();</span>
+    }
+
+    private static String getFormat(String filePath) {
+<span class="fc" id="L37">        String[] allExtensions = {&quot;json&quot;, &quot;yml&quot;, &quot;yaml&quot;};</span>
+<span class="fc" id="L38">        String fileExtension = filePath.substring(filePath.lastIndexOf('.') + 1).toLowerCase();</span>
+
+<span class="fc bfc" id="L40" title="All 2 branches covered.">        if (fileExtension.equals(allExtensions[2])) {</span>
+<span class="fc" id="L41">            return allExtensions[1];</span>
+        }
+<span class="fc" id="L43">        return fileExtension;</span>
+    }
     public static ObjectMapper chooseFormat(String format) {
-<span class="fc bfc" id="L19" title="All 2 branches covered.">        return &quot;json&quot;.equals(format) ? new ObjectMapper() : new ObjectMapper(new YAMLFactory());</span>
+<span class="fc bfc" id="L46" title="All 2 branches covered.">        return &quot;json&quot;.equals(format)  ? new ObjectMapper() : new ObjectMapper(new YAMLFactory());</span>
     }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

@@ -2,10 +2,14 @@
 <checkstyle version="8.37">
 <file name="/home/pelmen/java-project-71/app/src/main/java/hexlet/code/App.java">
 </file>
-<file name="/home/pelmen/java-project-71/app/src/main/java/hexlet/code/BasicFiles.java">
+<file name="/home/pelmen/java-project-71/app/src/main/java/hexlet/code/Comparator.java">
 </file>
 <file name="/home/pelmen/java-project-71/app/src/main/java/hexlet/code/Diff.java">
 </file>
+<file name="/home/pelmen/java-project-71/app/src/main/java/hexlet/code/Formatter.java">
+</file>
 <file name="/home/pelmen/java-project-71/app/src/main/java/hexlet/code/Parser.java">
+</file>
+<file name="/home/pelmen/java-project-71/app/src/main/java/hexlet/code/formatters/StylishFormatter.java">
 </file>
 </checkstyle>

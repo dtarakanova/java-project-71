@@ -1,66 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Diff.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">app</a> &gt; <a href="index.source.html" class="el_package">hexlet.code</a> &gt; <span class="el_source">Diff.java</span></div><h1>Diff.java</h1><pre class="source lang-java linenums">package hexlet.code;
-
-import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
-import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
-import java.util.Set;
-import java.util.TreeMap;
 
 
-<span class="nc" id="L13">public class Diff {</span>
+<span class="nc" id="L6">public class Diff {</span>
 
     public static String generate(String filepath1, String filepath2) throws Exception {
-<span class="fc" id="L16">        Map&lt;String, Object&gt; newMap1 = readFile(filepath1);</span>
-<span class="fc" id="L17">        Map&lt;String, Object&gt; newMap2 = readFile(filepath2);</span>
-<span class="fc" id="L18">        Map&lt;String, Object&gt; mapsCombined = new HashMap&lt;&gt;(newMap1);</span>
-<span class="fc" id="L19">        mapsCombined.putAll(newMap2);</span>
-
-<span class="fc" id="L21">        Map&lt;String, Object&gt; sortedMap = new TreeMap&lt;&gt;(mapsCombined);</span>
-
-<span class="fc" id="L23">        StringBuilder builder = new StringBuilder(&quot;{&quot;  + &quot;\n&quot;);</span>
-
-<span class="fc" id="L25">        Set&lt;String&gt; allKeys = sortedMap.keySet();</span>
-<span class="fc bfc" id="L26" title="All 2 branches covered.">        for (String key : allKeys) {</span>
-<span class="fc" id="L27">            Object value = sortedMap.get(key);</span>
-<span class="fc" id="L28">            Object oldValue = newMap1.get(key);</span>
-<span class="fc bfc" id="L29" title="All 4 branches covered.">            if (newMap1.containsKey(key) &amp;&amp; newMap2.containsKey(key)) {</span>
-<span class="fc bfc" id="L30" title="All 2 branches covered.">                if ((newMap1.get(key)).equals(newMap2.get(key))) {</span>
-<span class="fc" id="L31">                    builder.append(&quot;  &quot;).append(key).append(&quot;: &quot;).append(value).append(&quot;\n&quot;);</span>
-                } else {
-<span class="fc" id="L33">                    builder.append(&quot;- &quot;).append(key).append(&quot;: &quot;).append(oldValue).append(&quot;\n&quot;);</span>
-<span class="fc" id="L34">                    builder.append(&quot;+ &quot;).append(key).append(&quot;: &quot;).append(value).append(&quot;\n&quot;);</span>
-                }
-            } else {
-<span class="pc bpc" id="L37" title="1 of 4 branches missed.">                if (newMap1.containsKey(key) &amp;&amp; !newMap2.containsKey(key)) {</span>
-<span class="fc" id="L38">                    builder.append(&quot;- &quot;).append(key).append(&quot;: &quot;).append(value).append(&quot;\n&quot;);</span>
-                } else {
-<span class="fc" id="L40">                    builder.append(&quot;+ &quot;).append(key).append(&quot;: &quot;).append(value).append(&quot;\n&quot;);</span>
-                }
-            }
-<span class="fc" id="L43">        }</span>
-<span class="fc" id="L44">        builder.append(&quot;}&quot;);</span>
-<span class="fc" id="L45">        return builder.toString();</span>
+<span class="fc" id="L9">        return generate(filepath1, filepath2, &quot;stylish&quot;);</span>
     }
 
-    private static Map&lt;String, Object&gt; readFile(String filePath) throws IOException {
-<span class="fc" id="L49">        var normalizePath = normalizePath(filePath);</span>
-<span class="fc" id="L50">        var format = getFormat(filePath);</span>
-
-<span class="fc" id="L52">        var content = Files.readString(normalizePath);</span>
-
-<span class="fc" id="L54">        return Parser.parse(content, format);</span>
-    }
-
-    private static Path normalizePath(String path) {
-<span class="fc" id="L58">        return Paths.get(path).toAbsolutePath().normalize();</span>
-    }
-
-    private static String getFormat(String filePath) {
-<span class="fc" id="L62">        var pathParts = filePath.split(&quot;\\.&quot;);</span>
-<span class="fc" id="L63">        return pathParts[pathParts.length - 1];</span>
+    public static String generate(String filepath1, String filepath2, String format) throws Exception {
+<span class="fc" id="L13">        Map&lt;String, Object&gt; newMap1 = Parser.readFile(filepath1);</span>
+<span class="fc" id="L14">        Map&lt;String, Object&gt; newMap2 = Parser.readFile(filepath2);</span>
+<span class="fc" id="L15">        List&lt;Map&lt;String, Object&gt;&gt; comparisonResult = Comparator.compareFiles(newMap1, newMap2);</span>
+<span class="fc" id="L16">        return Formatter.formatChoice(comparisonResult, format);</span>
     }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>
