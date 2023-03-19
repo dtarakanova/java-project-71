@@ -5,5 +5,11 @@
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/dtarakanova/java-project-71/workflows/hexlet-check/badge.svg)](https://github.com/dtarakanova/java-project-71/actions)
 
-Asciinema
+<h2>Description</h2>
+This tool finds differences between 2 files and demonstrates them in different formats:
+1. **Default** - brief and short.
+2. **Plain** - detailed comments on the changes.
+3. **JSON** - difference result in JSON format.
+
+<h2>Demonstration</h2>
 https://asciinema.org/a/Z9uL0u8HQHb8Gc65zxpsxszPG
