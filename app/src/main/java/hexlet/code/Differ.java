@@ -3,7 +3,7 @@ import java.util.List;
 import java.util.Map;
 
 
-public class Diff {
+public class Differ {
 
     public static String generate(String filepath1, String filepath2) throws Exception {
         return generate(filepath1, filepath2, "stylish");

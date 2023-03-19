@@ -1,4 +1,4 @@
-import hexlet.code.Diff;
+import hexlet.code.Differ;
 import org.junit.jupiter.api.Test;
 
 import java.nio.file.Files;
@@ -67,25 +67,25 @@ public class DiffTest {
 
     @Test
         public void testRightComparisonJSON() throws Exception {
-        String result = Diff.generate(FILE1_JSON_FILEPATH1, FILE2_JSON_FILEPATH2);
+        String result = Differ.generate(FILE1_JSON_FILEPATH1, FILE2_JSON_FILEPATH2);
         assertThat(result).isEqualTo(DEFAULT_CORRECT_RESULT);
     }
 
     @Test
     public void testRightComparisonYAML() throws Exception {
-        String result = Diff.generate(FILE1_YAML_FILEPATH1, FILE2_YAML_FILEPATH2);
+        String result = Differ.generate(FILE1_YAML_FILEPATH1, FILE2_YAML_FILEPATH2);
         assertThat(result).isEqualTo(DEFAULT_CORRECT_RESULT);
     }
 
     @Test
     public void testRightComparisonPlainJSON() throws Exception {
-        String result = Diff.generate(FILE1_JSON_FILEPATH1, FILE2_JSON_FILEPATH2, "plain");
+        String result = Differ.generate(FILE1_JSON_FILEPATH1, FILE2_JSON_FILEPATH2, "plain");
         assertThat(result).isEqualTo(PLAIN_CORRECT_RESULT);
     }
 
     @Test
     public void testRightComparisonPlainYAML() throws Exception {
-        String result = Diff.generate(FILE1_YAML_FILEPATH1, FILE2_YAML_FILEPATH2, "plain");
+        String result = Differ.generate(FILE1_YAML_FILEPATH1, FILE2_YAML_FILEPATH2, "plain");
         assertThat(result).isEqualTo(PLAIN_CORRECT_RESULT);
     }
 
@@ -93,7 +93,7 @@ public class DiffTest {
     public void testRightComparisonFormatJSON() throws Exception {
         Path expectedPath = Paths.get(JSON_CORRECT_RESULT_LINK);
         var expected = Files.readString(expectedPath);
-        var actual = Diff.generate(FILE1_YAML_FILEPATH1, FILE2_YAML_FILEPATH2, "json");
+        var actual = Differ.generate(FILE1_YAML_FILEPATH1, FILE2_YAML_FILEPATH2, "json");
         assertEquals(expected, actual);
     }
 }
