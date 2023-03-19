@@ -1,7 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="baf60795-1836-43d2-b5e4-0f47ac868b35" name="Changes" comment="Clean cache for correct JaCoCo report" />
+    <list default="true" id="baf60795-1836-43d2-b5e4-0f47ac868b35" name="Changes" comment="Clean cache for correct JaCoCo report">
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/install/app/lib/app-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/install/app/lib/app-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/libs/app-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/libs/app-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/reports/checkstyle/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/reports/checkstyle/main.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/reports/checkstyle/main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/reports/checkstyle/main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/reports/jacoco/test/html/hexlet.code.formatters/Plain.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/reports/jacoco/test/html/hexlet.code.formatters/Plain.java.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/reports/jacoco/test/html/hexlet.code.formatters/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/reports/jacoco/test/html/hexlet.code.formatters/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/reports/jacoco/test/html/hexlet.code.formatters/index.source.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/reports/jacoco/test/html/hexlet.code.formatters/index.source.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/reports/jacoco/test/html/hexlet.code/Formatter.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/reports/jacoco/test/html/hexlet.code/Formatter.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/reports/jacoco/test/html/hexlet.code/Formatter.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/reports/jacoco/test/html/hexlet.code/Formatter.java.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/reports/jacoco/test/html/hexlet.code/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/reports/jacoco/test/html/hexlet.code/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/reports/jacoco/test/html/hexlet.code/index.source.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/reports/jacoco/test/html/hexlet.code/index.source.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/reports/jacoco/test/html/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/reports/jacoco/test/html/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/reports/jacoco/test/html/jacoco-sessions.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/reports/jacoco/test/html/jacoco-sessions.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
