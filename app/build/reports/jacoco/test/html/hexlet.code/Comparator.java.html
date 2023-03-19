@@ -18,7 +18,7 @@ import java.util.TreeSet;
 <span class="fc bfc" id="L18" title="All 4 branches covered.">            if (newMap1.containsKey(key) &amp;&amp; !newMap2.containsKey(key)) {</span>
 <span class="fc" id="L19">                result.put(&quot;key&quot;, key);</span>
 <span class="fc" id="L20">                result.put(&quot;oldvalue&quot;, newMap1.get(key));</span>
-<span class="fc" id="L21">                result.put(&quot;status&quot;, &quot;deleted&quot;);</span>
+<span class="fc" id="L21">                result.put(&quot;status&quot;, &quot;removed&quot;);</span>
 <span class="pc bpc" id="L22" title="1 of 4 branches missed.">            } else if (newMap2.containsKey(key) &amp;&amp; !newMap1.containsKey(key)) {</span>
 <span class="fc" id="L23">                result.put(&quot;key&quot;, key);</span>
 <span class="fc" id="L24">                result.put(&quot;newvalue&quot;, newMap2.get(key));</span>

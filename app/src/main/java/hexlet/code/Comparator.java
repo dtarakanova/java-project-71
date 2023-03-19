@@ -18,7 +18,7 @@ public class Comparator {
             if (newMap1.containsKey(key) && !newMap2.containsKey(key)) {
                 result.put("key", key);
                 result.put("oldvalue", newMap1.get(key));
-                result.put("status", "deleted");
+                result.put("status", "removed");
             } else if (newMap2.containsKey(key) && !newMap1.containsKey(key)) {
                 result.put("key", key);
                 result.put("newvalue", newMap2.get(key));

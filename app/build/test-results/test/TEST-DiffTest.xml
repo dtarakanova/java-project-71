@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="DiffTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2023-03-16T07:01:03" hostname="DESKTOP-AE5MQUD" time="2.03">
+<testsuite name="DiffTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2023-03-19T08:45:01" hostname="DESKTOP-AE5MQUD" time="1.928">
   <properties/>
-  <testcase name="testRightComparisonJSON()" classname="DiffTest" time="1.84"/>
-  <testcase name="testRightComparisonYAML()" classname="DiffTest" time="0.188"/>
+  <testcase name="testRightComparisonPlainJSON()" classname="DiffTest" time="1.67"/>
+  <testcase name="testRightComparisonPlainYAML()" classname="DiffTest" time="0.202"/>
+  <testcase name="testRightComparisonJSON()" classname="DiffTest" time="0.016"/>
+  <testcase name="testRightComparisonYAML()" classname="DiffTest" time="0.024"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

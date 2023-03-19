@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Plain.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">app</a> &gt; <a href="index.source.html" class="el_package">hexlet.code.formatters</a> &gt; <span class="el_source">Plain.java</span></div><h1>Plain.java</h1><pre class="source lang-java linenums">package hexlet.code.formatters;
+
+import java.util.List;
+import java.util.Map;
+
+<span class="nc" id="L6">public class Plain {</span>
+    private static StringBuilder result;
+
+    public static String plainResult(List&lt;Map&lt;String, Object&gt;&gt; comparisonResult) {
+<span class="fc" id="L10">        result = new StringBuilder();</span>
+
+<span class="fc bfc" id="L12" title="All 2 branches covered.">        for (Map&lt;String, Object&gt; map: comparisonResult) {</span>
+
+<span class="fc bfc" id="L14" title="All 4 branches covered.">            switch ((String) map.get(&quot;status&quot;)) {</span>
+<span class="fc" id="L15">                case &quot;updated&quot; -&gt; caseUpdated(map);</span>
+<span class="fc" id="L16">                case &quot;added&quot; -&gt; caseAdded(map);</span>
+<span class="fc" id="L17">                case &quot;removed&quot; -&gt; caseRemoved(map);</span>
+                default -&gt; { }
+            }
+<span class="fc" id="L20">        }</span>
+<span class="fc" id="L21">        return result.toString();</span>
+    }
+
+    private static void basicString(Map&lt;String, Object&gt; map) {
+<span class="fc" id="L25">        String status = (String)map.get(&quot;status&quot;);</span>
+<span class="fc" id="L26">        result.append(&quot;Property '&quot;)</span>
+<span class="fc" id="L27">                .append(map.get(&quot;key&quot;))</span>
+<span class="fc" id="L28">                .append(&quot;' was &quot;)</span>
+<span class="fc" id="L29">                .append(status);</span>
+<span class="fc" id="L30">    }</span>
+
+    private static void caseUpdated(Map&lt;String, Object&gt; map) {
+<span class="fc" id="L33">        basicString(map);</span>
+<span class="fc" id="L34">        result.append(&quot;. From &quot;)</span>
+<span class="fc" id="L35">                .append(showValue(map.get(&quot;oldvalue&quot;)))</span>
+<span class="fc" id="L36">                .append(&quot; to &quot;)</span>
+<span class="fc" id="L37">                .append(showValue(map.get(&quot;newvalue&quot;)))</span>
+<span class="fc" id="L38">                .append(&quot;\n&quot;);</span>
+<span class="fc" id="L39">    }</span>
+
+    private static void caseAdded(Map&lt;String, Object&gt; map) {
+<span class="fc" id="L42">        basicString(map);</span>
+<span class="fc" id="L43">        result.append(&quot; with value: &quot;)</span>
+<span class="fc" id="L44">                .append(showValue(map.get(&quot;newvalue&quot;)))</span>
+<span class="fc" id="L45">                .append(&quot;\n&quot;);</span>
+<span class="fc" id="L46">    }</span>
+
+    private static void caseRemoved(Map&lt;String, Object&gt; map) {
+<span class="fc" id="L49">        basicString(map);</span>
+<span class="fc" id="L50">        result.append(&quot;\n&quot;);</span>
+<span class="fc" id="L51">    }</span>
+
+    private static Object showValue(Object value) {
+<span class="fc bfc" id="L54" title="All 2 branches covered.">        if (value instanceof String) {</span>
+<span class="fc" id="L55">            return &quot;'&quot; + value + &quot;'&quot;;</span>
+<span class="fc bfc" id="L56" title="All 4 branches covered.">        } else if (value instanceof List || value instanceof Map) {</span>
+<span class="fc" id="L57">            return &quot;[complex value]&quot;;</span>
+        }
+<span class="fc" id="L59">        return value;</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>
