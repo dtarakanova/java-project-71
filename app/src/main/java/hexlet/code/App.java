@@ -34,3 +34,4 @@ public class App implements Callable<Integer> {
         int exitCode = new CommandLine(new App()).execute(args);
         System.exit(exitCode);
     }
+}
