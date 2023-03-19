@@ -1,47 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="baf60795-1836-43d2-b5e4-0f47ac868b35" name="Changes" comment="Clean cache for correct JaCoCo report">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/hexlet/code/formatters/Plain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/.gradle/7.4/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/app/.gradle/7.4/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/.gradle/7.4/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/app/.gradle/7.4/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/.gradle/7.4/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/app/.gradle/7.4/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/.gradle/7.4/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/app/.gradle/7.4/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/.gradle/7.4/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/app/.gradle/7.4/fileHashes/resourceHashesCache.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/app/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/app/.gradle/file-system.probe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/classes/java/main/hexlet/code/Comparator.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/classes/java/main/hexlet/code/Comparator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/classes/java/main/hexlet/code/Formatter.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/classes/java/main/hexlet/code/Formatter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/classes/java/main/hexlet/code/formatters/StylishFormatter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/classes/java/test/DiffTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/classes/java/test/DiffTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/install/app/lib/app-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/install/app/lib/app-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/jacoco/test.exec" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/jacoco/test.exec" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/libs/app-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/libs/app-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/reports/jacoco/test/html/hexlet.code.formatters/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/reports/jacoco/test/html/hexlet.code.formatters/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/reports/jacoco/test/html/hexlet.code.formatters/index.source.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/reports/jacoco/test/html/hexlet.code.formatters/index.source.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/reports/jacoco/test/html/hexlet.code/Comparator.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/reports/jacoco/test/html/hexlet.code/Comparator.java.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/reports/jacoco/test/html/hexlet.code/Formatter.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/reports/jacoco/test/html/hexlet.code/Formatter.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/reports/jacoco/test/html/hexlet.code/Formatter.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/reports/jacoco/test/html/hexlet.code/Formatter.java.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/reports/jacoco/test/html/hexlet.code/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/reports/jacoco/test/html/hexlet.code/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/reports/jacoco/test/html/hexlet.code/index.source.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/reports/jacoco/test/html/hexlet.code/index.source.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/reports/jacoco/test/html/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/reports/jacoco/test/html/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/reports/jacoco/test/html/jacoco-sessions.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/reports/jacoco/test/html/jacoco-sessions.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/reports/jacoco/test/jacocoTestReport.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/reports/jacoco/test/jacocoTestReport.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/reports/tests/test/classes/DiffTest.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/reports/tests/test/classes/DiffTest.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/reports/tests/test/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/reports/tests/test/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/reports/tests/test/packages/default-package.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/reports/tests/test/packages/default-package.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/test-results/test/TEST-DiffTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/test-results/test/TEST-DiffTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/test-results/test/binary/results.bin" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/test-results/test/binary/results.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/tmp/compileTestJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/compileTestJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/file1.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/app/file1.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/file2.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/app/file2.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/hexlet/code/Comparator.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/hexlet/code/Comparator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/hexlet/code/Formatter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/hexlet/code/Formatter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/hexlet/code/formatters/StylishFormatter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/hexlet/code/formatters/Stylish.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/test/java/DiffTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/java/DiffTest.java" afterDir="false" />
-    </list>
+    <list default="true" id="baf60795-1836-43d2-b5e4-0f47ac868b35" name="Changes" comment="Clean cache for correct JaCoCo report" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

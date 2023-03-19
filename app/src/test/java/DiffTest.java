@@ -1,7 +1,13 @@
 import hexlet.code.Diff;
 import org.junit.jupiter.api.Test;
 
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 public class DiffTest {
     public static final String FILE1_JSON_FILEPATH1 =
             "src/test/resources/JSONfiles/file1J.json";
@@ -11,6 +17,10 @@ public class DiffTest {
             "src/test/resources/YAMLfiles/file1Y.yaml";
     public static final String FILE2_YAML_FILEPATH2 =
             "src/test/resources/YAMLfiles/file2Y.yaml";
+
+    public static final String JSON_CORRECT_RESULT_LINK =
+            "src/test/resources/jsonFormatExpected.json";
+
     private static final String DEFAULT_CORRECT_RESULT = """
             {
                 chars1: [a, b, c]
@@ -54,6 +64,7 @@ public class DiffTest {
             Property 'setting3' was updated. From true to 'none'
             """;
 
+
     @Test
         public void testRightComparisonJSON() throws Exception {
         String result = Diff.generate(FILE1_JSON_FILEPATH1, FILE2_JSON_FILEPATH2);
@@ -76,5 +87,13 @@ public class DiffTest {
     public void testRightComparisonPlainYAML() throws Exception {
         String result = Diff.generate(FILE1_YAML_FILEPATH1, FILE2_YAML_FILEPATH2, "plain");
         assertThat(result).isEqualTo(PLAIN_CORRECT_RESULT);
+    }
+
+    @Test
+    public void testRightComparisonFormatJSON() throws Exception {
+        Path expectedPath = Paths.get(JSON_CORRECT_RESULT_LINK);
+        var expected = Files.readString(expectedPath);
+        var actual = Diff.generate(FILE1_YAML_FILEPATH1, FILE2_YAML_FILEPATH2, "json");
+        assertEquals(expected, actual);
     }
 }
