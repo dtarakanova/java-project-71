@@ -7,9 +7,9 @@
 
 <h2>Description</h2>
 This tool finds differences between 2 files and demonstrates them in different formats:<br>
-**Default** - brief and short.<br>
-**Plain** - detailed comments on the changes.<br>
-**JSON** - difference result in JSON format.<br>
+**Default** - brief and short<br>
+**Plain** - detailed comments on the changes<br>
+**JSON** - difference result in JSON format<br>
 
 <h2>Demonstration</h2>
 https://asciinema.org/a/Z9uL0u8HQHb8Gc65zxpsxszPG
