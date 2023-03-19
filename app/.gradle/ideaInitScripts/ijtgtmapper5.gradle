@@ -1,6 +1,0 @@
-ext.pathMapper = [:]
-ext.pathMapper.put('C:/Program Files/JetBrains/IntelliJ IDEA Community Edition 2022.2.1/lib/external-system-rt.jar', '/mnt/c/Program Files/JetBrains/IntelliJ IDEA Community Edition 2022.2.1/lib/external-system-rt.jar')
-ext.pathMapper.put('//wsl\$/Ubuntu/usr/lib/jvm/java-17-openjdk-amd64/bin/java', '/usr/lib/jvm/java-17-openjdk-amd64/bin/java')
-ext.pathMapper.put('//wsl\$/Ubuntu/home/pelmen/java-project-71/app', '/home/pelmen/java-project-71/app')
-ext.pathMapper.put("<<target java executable path>>", '/usr/lib/jvm/java-17-openjdk-amd64/bin/java')
-ext.mapPath = { path -> pathMapper.get(path) ?: path }
