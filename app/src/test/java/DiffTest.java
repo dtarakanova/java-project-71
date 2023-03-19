@@ -61,8 +61,7 @@ public class DiffTest {
             Property 'obj1' was added with value: [complex value]
             Property 'setting1' was updated. From 'Some value' to 'Another value'
             Property 'setting2' was updated. From 200 to 300
-            Property 'setting3' was updated. From true to 'none'
-            """;
+            Property 'setting3' was updated. From true to 'none'""";
 
 
     @Test

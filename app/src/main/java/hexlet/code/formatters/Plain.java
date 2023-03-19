@@ -18,6 +18,7 @@ public class Plain {
                 default -> { }
             }
         }
+        result.deleteCharAt(result.length() - 1);
         return result.toString();
     }
 
