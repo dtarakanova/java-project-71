@@ -17,7 +17,7 @@ public class Stylish {
                 }
                 case "removed" -> basicString(map, "oldvalue", "  - ");
                 case "added" -> basicString(map, "newvalue", "  + ");
-                default -> { }
+                default -> throw new RuntimeException("Unknown status: " + "status");
             }
         }
         return result.append("}").toString();
