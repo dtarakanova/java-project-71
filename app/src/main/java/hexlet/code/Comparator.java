@@ -9,29 +9,29 @@ import java.util.Set;
 import java.util.TreeSet;
 
 public class Comparator {
-    public static List<Map<String, Object>> compareFiles(Map<String, Object> newMap1, Map<String, Object> newMap2) {
+    public static List<Map<String, Object>> compareFiles(Map<String, Object> data1, Map<String, Object> data2) {
         List<Map<String, Object>> resultList = new ArrayList<>();
-        Set<String> keySet = new TreeSet<>(newMap1.keySet());
-        keySet.addAll(newMap2.keySet());
+        Set<String> keySet = new TreeSet<>(data1.keySet());
+        keySet.addAll(data2.keySet());
         for (String key: keySet) {
             Map<String, Object> result = new LinkedHashMap<>();
-            if (newMap1.containsKey(key) && !newMap2.containsKey(key)) {
+            if (data1.containsKey(key) && !data2.containsKey(key)) {
                 result.put("key", key);
-                result.put("oldvalue", newMap1.get(key));
+                result.put("oldvalue", data1.get(key));
                 result.put("status", "removed");
-            } else if (newMap2.containsKey(key) && !newMap1.containsKey(key)) {
+            } else if (data2.containsKey(key) && !data1.containsKey(key)) {
                 result.put("key", key);
-                result.put("newvalue", newMap2.get(key));
+                result.put("newvalue", data2.get(key));
                 result.put("status", "added");
-            } else if (Objects.equals(newMap1.get(key), (newMap2.get(key)))) {
+            } else if (Objects.equals(data1.get(key), (data2.get(key)))) {
                 result.put("key", key);
-                result.put("oldvalue", newMap1.get(key));
-                result.put("newvalue", newMap2.get(key));
+                result.put("oldvalue", data1.get(key));
+                result.put("newvalue", data2.get(key));
                 result.put("status", "unmodified");
             } else {
                 result.put("key", key);
-                result.put("oldvalue", newMap1.get(key));
-                result.put("newvalue", newMap2.get(key));
+                result.put("oldvalue", data1.get(key));
+                result.put("newvalue", data2.get(key));
                 result.put("status", "updated");
             }
             resultList.add(result);

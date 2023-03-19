@@ -10,9 +10,9 @@ public class Differ {
     }
 
     public static String generate(String filepath1, String filepath2, String format) throws Exception {
-        Map<String, Object> newMap1 = Parser.readFile(filepath1);
-        Map<String, Object> newMap2 = Parser.readFile(filepath2);
-        List<Map<String, Object>> comparisonResult = Comparator.compareFiles(newMap1, newMap2);
+        Map<String, Object> data1 = Parser.readFile(filepath1);
+        Map<String, Object> data2 = Parser.readFile(filepath2);
+        List<Map<String, Object>> comparisonResult = Comparator.compareFiles(data1, data2);
         return Formatter.formatChoice(comparisonResult, format);
     }
 }
