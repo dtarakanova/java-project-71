@@ -34,13 +34,7 @@ public class Differ {
     }
 
     private static String getFormat(String filePath) {
-        String[] allExtensions = {"json", "yml", "yaml"};
-        String extension = filePath.substring(filePath.lastIndexOf('.') + 1).toLowerCase();
-
-        if (extension.equals(allExtensions[2])) {
-            return allExtensions[1];
-        }
-        return extension;
+        return filePath.substring(filePath.lastIndexOf('.') + 1).toLowerCase();
     }
 
 }
