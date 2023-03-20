@@ -5,10 +5,9 @@ import java.util.Map;
 
 public class Plain {
 
-    private static StringBuilder result;
 
     public static String plainResult(List<Map<String, Object>> comparisonResult) {
-        result = new StringBuilder();
+        StringBuilder result = new StringBuilder();
 
         for (Map<String, Object> map: comparisonResult) {
             switch ((String) map.get("status")) {
@@ -36,12 +35,15 @@ public class Plain {
         return result.toString();
     }
 
-    private static Object showValue(Object value) {
+    private static String showValue(Object value) {
+        String showVal;
         if (value instanceof String) {
-            return "'" + value + "'";
+            showVal = "'" + value + "'";
         } else if (value instanceof List || value instanceof Map) {
-            return "[complex value]";
+            showVal = "[complex value]";
+        } else {
+            showVal = String.valueOf(value);
         }
-        return value;
+        return showVal;
     }
 }
