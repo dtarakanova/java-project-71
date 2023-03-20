@@ -1,6 +1,5 @@
 package hexlet.code;
 
-import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -21,11 +20,10 @@ public class Differ {
         return Formatter.formatChoice(comparisonResult, format);
     }
 
-    public static Map<String, Object> read(String filePath) throws IOException {
+    public static Map<String, Object> read(String filePath) throws Exception {
         var normalizePath = normalizePath(filePath);
         var type = getFormat(filePath);
         var content = Files.readString(normalizePath);
-
         return Parser.parse(content, type);
     }
 

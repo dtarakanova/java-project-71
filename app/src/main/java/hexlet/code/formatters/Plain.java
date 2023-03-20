@@ -6,7 +6,7 @@ import java.util.Map;
 public class Plain {
 
 
-    public static String plainResult(List<Map<String, Object>> comparisonResult) {
+    public static String plainResult(List<Map<String, Object>> comparisonResult) throws Exception {
         StringBuilder result = new StringBuilder();
 
         for (Map<String, Object> map: comparisonResult) {
@@ -28,7 +28,7 @@ public class Plain {
                         .append("' was removed")
                         .append("\n");
                 case "unmodified" -> { }
-                default -> throw new RuntimeException("Unknown status: " + "status");
+                default -> throw new Exception("Unknown status: " + "format");
             }
         }
         result.deleteCharAt(result.length() - 1);

@@ -6,7 +6,7 @@ import java.util.Map;
 public class Stylish {
     private static StringBuilder result;
 
-    public static String stylishResult(List<Map<String, Object>> comparisonResult) {
+    public static String stylishResult(List<Map<String, Object>> comparisonResult) throws Exception {
         result = new StringBuilder("{\n");
         for (Map<String, Object> map: comparisonResult) {
             switch ((String) map.get("status")) {
@@ -17,7 +17,7 @@ public class Stylish {
                 }
                 case "removed" -> basicString(map, "oldvalue", "  - ");
                 case "added" -> basicString(map, "newvalue", "  + ");
-                default -> throw new RuntimeException("Unknown status: " + "status");
+                default -> throw new Exception("Unknown status: " + "status");
             }
         }
         return result.append("}").toString();
