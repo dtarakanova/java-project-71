@@ -42,6 +42,6 @@ public class Plain {
         } else if (value instanceof List || value instanceof Map) {
             return "[complex value]";
         }
-        return value;
+        return value.toString();
     }
 }
