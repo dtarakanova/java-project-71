@@ -5,8 +5,10 @@ import java.util.Map;
 
 public class Plain {
 
+    private static StringBuilder result;
+
     public static String plainResult(List<Map<String, Object>> comparisonResult) {
-        StringBuilder result = new StringBuilder();
+        result = new StringBuilder();
 
         for (Map<String, Object> map: comparisonResult) {
             switch ((String) map.get("status")) {
@@ -26,8 +28,8 @@ public class Plain {
                         .append(map.get("key"))
                         .append("' was removed")
                         .append("\n");
-                default -> {
-                }
+                case "unmodified" -> { }
+                default -> throw new RuntimeException("Unknown status: " + "status");
             }
         }
         result.deleteCharAt(result.length() - 1);
