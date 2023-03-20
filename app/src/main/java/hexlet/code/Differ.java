@@ -24,7 +24,6 @@ public class Differ {
     public static Map<String, Object> read(String filePath) throws IOException {
         var normalizePath = normalizePath(filePath);
         var type = getFormat(filePath);
-        System.out.println(type);
         var content = Files.readString(normalizePath);
 
         return Parser.parse(content, type);
