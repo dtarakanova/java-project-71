@@ -23,12 +23,9 @@ public class DiffTest {
             "src/test/resources/fixtures/file2J.json";
 
     public static final String FILE1_YAML_FILEPATH1 =
-            "src/test/resources/YAMLfiles/file1Y.yaml";
+            "src/test/resources/fixtures/file1Y.yaml";
     public static final String FILE2_YAML_FILEPATH2 =
-            "src/test/resources/YAMLfiles/file2Y.yaml";
-
-    public static final String JSON_CORRECT_RESULT_LINK =
-            "src/test/resources/jsonFormatExpected.json";
+            "src/test/resources/fixtures/file2Y.yaml";
 
     private static final String DEFAULT_CORRECT_RESULT = """
             {
@@ -87,7 +84,7 @@ public class DiffTest {
     public static void beforeAll() throws Exception {
         resultStylish = readFixture("result_stylish.txt");
         resultPlain = readFixture("result_plain.txt");
-        //resultJson = readFixture("result_stylish.txt");
+        resultJson = readFixture("result_json.json");
     }
 
 
@@ -116,13 +113,10 @@ public class DiffTest {
         String result = Differ.generate(FILE1_YAML_FILEPATH1, FILE2_YAML_FILEPATH2, "plain");
         assertThat(result).isEqualTo(PLAIN_CORRECT_RESULT);
     }
-
+*/
     @Test
     public void testRightComparisonFormatJSON() throws Exception {
-        Path expectedPath = Paths.get(JSON_CORRECT_RESULT_LINK);
-        var expected = Files.readString(expectedPath);
-        var actual = Differ.generate(FILE1_YAML_FILEPATH1, FILE2_YAML_FILEPATH2, "json");
-        assertEquals(expected, actual);
+        String result = Differ.generate(FILE1_YAML_FILEPATH1, FILE2_YAML_FILEPATH2, "json");
+        assertThat(result).isEqualTo(resultJson);
     }
-         */
 }
