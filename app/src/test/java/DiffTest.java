@@ -86,7 +86,7 @@ public class DiffTest {
     @BeforeAll
     public static void beforeAll() throws Exception {
         resultStylish = readFixture("result_stylish.txt");
-        resultPlain = readFixture("result_plain.txt");
+        resultPlain = readFixture("resultplain.txt");
         //resultJson = readFixture("result_stylish.txt");
     }
 

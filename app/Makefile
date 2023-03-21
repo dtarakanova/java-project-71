@@ -1,9 +1,9 @@
 run-dist :
-	./build/install/app/bin/app
+	@./build/install/app/bin/app
 build:
-	./gradlew build
+	@./gradlew build
 test:
-	./gradlew test
+	@./gradlew test
 report:
-	./gradlew jacocoTestReport
+	@./gradlew jacocoTestReport
 .PHONY: build
