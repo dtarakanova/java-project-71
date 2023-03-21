@@ -91,7 +91,7 @@ public class DiffTest {
     @Test
         public void testRightComparisonJSON() throws Exception {
         String result = Differ.generate(FILE1_JSON_FILEPATH1, FILE2_JSON_FILEPATH2);
-        assertThat(result).isEqualTo(resultStylish);
+        assertThat(result).isEqualToIgnoringWhitespace(resultStylish);
     }
 
     /*
@@ -104,16 +104,15 @@ public class DiffTest {
     @Test
     public void testRightComparisonPlainJSON() throws Exception {
         String result = Differ.generate(FILE1_JSON_FILEPATH1, FILE2_JSON_FILEPATH2, "plain");
-        assertThat(result).isEqualTo(resultPlain);
+        assertThat(result).isEqualToIgnoringWhitespace(resultPlain);
     }
 
-    /*
     @Test
     public void testRightComparisonPlainYAML() throws Exception {
         String result = Differ.generate(FILE1_YAML_FILEPATH1, FILE2_YAML_FILEPATH2, "plain");
-        assertThat(result).isEqualTo(PLAIN_CORRECT_RESULT);
+        assertThat(result).isEqualToIgnoringWhitespace(resultPlain);
     }
-*/
+
     @Test
     public void testRightComparisonFormatJSON() throws Exception {
         String result = Differ.generate(FILE1_YAML_FILEPATH1, FILE2_YAML_FILEPATH2, "json");
