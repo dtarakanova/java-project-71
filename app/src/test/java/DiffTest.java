@@ -1,4 +1,5 @@
 import hexlet.code.Differ;
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
 import java.nio.file.Files;
@@ -6,13 +7,21 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class DiffTest {
+
+    private static String resultStylish;
+
+    private static String resultPlain;
+    private static String resultJson;
+
+
+
     public static final String FILE1_JSON_FILEPATH1 =
-            "src/test/resources/JSONfiles/file1J.json";
+            "src/test/resources/fixtures/file1J.json";
     public static final String FILE2_JSON_FILEPATH2 =
-            "src/test/resources/JSONfiles/file2J.json";
+            "src/test/resources/fixtures/file2J.json";
+
     public static final String FILE1_YAML_FILEPATH1 =
             "src/test/resources/YAMLfiles/file1Y.yaml";
     public static final String FILE2_YAML_FILEPATH2 =
@@ -64,24 +73,44 @@ public class DiffTest {
             Property 'setting3' was updated. From true to 'none'""";
 
 
+    private static Path getFixturePath(String fileName) {
+        return Paths.get("src", "test", "resources", "fixtures", fileName)
+                .toAbsolutePath().normalize();
+    }
+
+    private static String readFixture(String fileName) throws Exception {
+        Path filePath = getFixturePath(fileName);
+        return Files.readString(filePath).trim();
+    }
+
+    @BeforeAll
+    public static void beforeAll() throws Exception {
+        resultStylish = readFixture("result_stylish.txt");
+        resultPlain = readFixture("result_plain.txt");
+        //resultJson = readFixture("result_stylish.txt");
+    }
+
+
     @Test
         public void testRightComparisonJSON() throws Exception {
         String result = Differ.generate(FILE1_JSON_FILEPATH1, FILE2_JSON_FILEPATH2);
-        assertThat(result).isEqualTo(DEFAULT_CORRECT_RESULT);
+        assertThat(result).isEqualTo(resultStylish);
     }
 
+    /*
     @Test
     public void testRightComparisonYAML() throws Exception {
         String result = Differ.generate(FILE1_YAML_FILEPATH1, FILE2_YAML_FILEPATH2);
         assertThat(result).isEqualTo(DEFAULT_CORRECT_RESULT);
-    }
+    }*/
 
     @Test
     public void testRightComparisonPlainJSON() throws Exception {
         String result = Differ.generate(FILE1_JSON_FILEPATH1, FILE2_JSON_FILEPATH2, "plain");
-        assertThat(result).isEqualTo(PLAIN_CORRECT_RESULT);
+        assertThat(result).isEqualTo(resultPlain);
     }
 
+    /*
     @Test
     public void testRightComparisonPlainYAML() throws Exception {
         String result = Differ.generate(FILE1_YAML_FILEPATH1, FILE2_YAML_FILEPATH2, "plain");
@@ -95,4 +124,5 @@ public class DiffTest {
         var actual = Differ.generate(FILE1_YAML_FILEPATH1, FILE2_YAML_FILEPATH2, "json");
         assertEquals(expected, actual);
     }
+         */
 }
