@@ -15,7 +15,7 @@ public class Formatter {
             case "stylish" -> Stylish.stylishResult(comparisonResult);
             case "plain" -> Plain.plainResult(comparisonResult);
             case "json" -> Json.jsonResult(comparisonResult);
-            default -> throw new Exception("This format is unknown " + format);
+            default -> throw new Exception("This format is unknown: " + format);
         };
     }
 }

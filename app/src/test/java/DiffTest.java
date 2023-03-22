@@ -45,7 +45,6 @@ public class DiffTest {
         resultJson = readFixture("result_json.json");
     }
 
-
     @Test
         public void testRightComparisonJSON() throws Exception {
         String result = Differ.generate(FILE1_JSON_FILEPATH1, FILE2_JSON_FILEPATH2);
@@ -57,6 +56,19 @@ public class DiffTest {
         String result = Differ.generate(FILE1_YAML_FILEPATH1, FILE2_YAML_FILEPATH2);
         assertThat(result).isEqualToIgnoringWhitespace(resultStylish);
     }
+
+    @Test
+    public void testRightComparisonStylishJSON() throws Exception {
+        String result = Differ.generate(FILE1_JSON_FILEPATH1, FILE2_JSON_FILEPATH2, "stylish");
+        assertThat(result).isEqualToIgnoringWhitespace(resultStylish);
+    }
+
+    @Test
+    public void testRightComparisonStylishYAML() throws Exception {
+        String result = Differ.generate(FILE1_YAML_FILEPATH1, FILE2_YAML_FILEPATH2, "stylish");
+        assertThat(result).isEqualToIgnoringWhitespace(resultStylish);
+    }
+
 
     @Test
     public void testRightComparisonPlainJSON() throws Exception {
@@ -71,7 +83,13 @@ public class DiffTest {
     }
 
     @Test
-    public void testRightComparisonFormatJSON() throws Exception {
+    public void testRightComparisonFormatJSONJ() throws Exception {
+        String result = Differ.generate(FILE1_JSON_FILEPATH1, FILE2_JSON_FILEPATH2, "json");
+        assertThat(result).isEqualTo(resultJson);
+    }
+
+    @Test
+    public void testRightComparisonFormatJSONY() throws Exception {
         String result = Differ.generate(FILE1_YAML_FILEPATH1, FILE2_YAML_FILEPATH2, "json");
         assertThat(result).isEqualTo(resultJson);
     }
